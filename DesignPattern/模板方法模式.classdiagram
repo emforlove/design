@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="de859e5a-1e85-4934-a4cc-a197df426f9e" name="模板方法模式" linkedPackageId="9187df0c-e15e-48e6-b17d-bfe85266c522" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b2bcc4be-4169-4dff-8fb4-25aa7e26a2ec">
+      <elementDefinition Id="c15a5555-492a-47d7-944c-a8aca8a8b92c" />
+      <body>定义了一个操作中的算法骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义算法的某些特定步骤。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="99dded9c-f9b3-44d0-a3fc-260e226b65c0" name="AbstractClass" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="388f4f35-3e1c-4d74-a440-d9c0b924ce00" />
+        <ownedOperationsInternal>
+          <operation Id="9e042b83-56d9-40a2-bbd3-77cb68a641e8" name="TemplateMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="113e909d-b579-4c9b-a53b-671ad6039205" />
+          </operation>
+          <operation Id="988d5903-33ff-4666-a038-8ba2f6451308" name="PrimitveOperationA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8ec47f18-5484-41fd-8678-3afb27ef6c51" />
+          </operation>
+          <operation Id="00e76a79-d810-4279-acf9-83372621cc8a" name="PrimitveOperationB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="64c2bafc-7db2-4db1-b5c2-8150fbdb69b6" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="209922c2-be52-49c5-a95d-e772f44f5546" name="ConcreteClass" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a90a8cf-6705-4bf5-acb7-cc860f68dd66" />
+        <generalsInternal>
+          <generalization Id="d717987d-fd77-4c62-bf30-368e18e94d54" isSubstitutable="false">
+            <classMoniker Id="99dded9c-f9b3-44d0-a3fc-260e226b65c0" LastKnownName="AbstractClass" />
+            <elementDefinition Id="70c91d6d-aace-4a4d-962f-d6822920b778" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5334a472-be2f-498a-884e-ef55912e0528" name="PrimitveOperationA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e711b709-396e-4bf0-8ea6-1436ae1c8560" />
+          </operation>
+          <operation Id="5e22971e-510a-4a52-8adf-15fddaa52027" name="PrimitveOperationB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="19bebbbb-03d8-4e0f-bc1c-fd08d77eb379" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="9187df0c-e15e-48e6-b17d-bfe85266c522" name="DesignPattern">
+    <elementDefinition Id="3e45850a-fdd2-4ab0-8c47-6224669680ab" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b3ee16eb-205f-4d79-807a-ce2411df438a">
+        <profileInstance Id="bd010bee-4a27-45a0-8a7c-476769666268" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="50fdb617-f5c3-4c02-83c6-2d78f0f25246">
+        <profileInstance Id="8eb189b5-c9c4-43fe-9e18-7379496a83ac" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12b381f6-bcb8-4b0d-a75f-332e4afcee21}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>DesignPattern-uml</Name>
+    <RootNamespace>DesignPattern</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="DataImport.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DataImport.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DataImport.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package_0925.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0927.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UML.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UML.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UML.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="中介者模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="中介者模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>中介者模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="享元模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="享元模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>享元模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="代理模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="代理模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>代理模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="单例模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="单例模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>单例模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="原型模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="原型模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>原型模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="命令模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="命令模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>命令模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="备忘录模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="备忘录模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>备忘录模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="外观模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="外观模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>外观模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="工厂方法.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="工厂方法.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>工厂方法.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="建造者模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="建造者模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>建造者模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="抽象工厂模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="抽象工厂模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>抽象工厂模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="桥接模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="桥接模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>桥接模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="模板方法模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="模板方法模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>模板方法模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="状态模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="状态模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>状态模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="策略模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="策略模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>策略模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="简单工厂模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="简单工厂模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>简单工厂模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="组合模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="组合模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>组合模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="职责链模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="职责链模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>职责链模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="装饰模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="装饰模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>装饰模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="观察者模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="观察者模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>观察者模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="解释器模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="解释器模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>解释器模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="访问者模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="访问者模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>访问者模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="迭代器模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="迭代器模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>迭代器模式.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="适配器模式.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="适配器模式.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>适配器模式.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\DesignPattern.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

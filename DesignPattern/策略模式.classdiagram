@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6f3de11e-d322-46f1-b5e5-3fdf87695119" name="策略模式" linkedPackageId="d6868f9e-a296-4202-8401-aae1fc8d07dd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0d6f7998-ea92-4506-851e-103fae0a55ea">
+      <elementDefinition Id="1e844f90-8ccb-4910-894a-36909596d1a7" />
+      <body>策略类，定义所有支持的算法的公共接口</body>
+    </comment>
+    <comment Id="41fb5d03-64a8-45ef-a86a-98d7e78f3a1d">
+      <elementDefinition Id="7b9f102c-7085-4ded-85c2-8ee400fda4a2" />
+      <body>Context上下文，用一个ConcreteStrategy来配置， 维护一个对Strategy对象的引用。</body>
+    </comment>
+    <comment Id="ef22db47-357b-43b4-ac5f-84b83a359a32">
+      <elementDefinition Id="f3549b97-cc7e-47dc-bf27-a1c91ade3b00" />
+      <body>具体策略类，封装了具体的算法或行为，继承与Strategy。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba27d2cb-c734-49eb-b12b-b6ac9cbae110" name="Context" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="36e23483-402c-4f23-b81c-d6da2c9c2613" />
+        <targetEnds>
+          <association Id="b5b28f3b-e666-43fb-88dc-0e79da07e8c6" isDerived="false" sourceEndRoleName="Context" targetEndRoleName="Strategy" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d668702c-11db-4150-ab88-0239e5e33f0d" LastKnownName="Strategy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a369378a-243a-45af-bed6-144f3b3f17cf" name="Context" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db931816-3ab8-48d5-9121-394318ea65d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e521cf0-e9e2-4146-af7e-a7c861106803" name="Strategy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2969d87-0c9e-4e39-a983-11696b9c2e89" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="048c49bc-8ad4-4651-9480-8536e41bafcf" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="c4c6eeab-0299-49ba-8278-0c8432d95d6b" name="ContextInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1d534696-5219-4f27-94b4-f912edd08a56" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d668702c-11db-4150-ab88-0239e5e33f0d" name="Strategy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d015229f-dae9-4811-8583-4335d9238f04" />
+        <ownedOperationsInternal>
+          <operation Id="f9311838-8a98-410e-97df-7b62182d0b1a" name="AlgorithmInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="03c3f5b1-014c-4b52-a761-ecc9a9e90fb0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="32257161-1b25-484a-8ae7-ac573a026500" name="ConcretestrategyA" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="84ca0ab6-a3e4-47c9-86bc-e3e3c5f63ff6" />
+        <generalsInternal>
+          <generalization Id="9319ec41-f3a6-42cd-8616-fe08f58b5180" isSubstitutable="false">
+            <classMoniker Id="d668702c-11db-4150-ab88-0239e5e33f0d" LastKnownName="Strategy" />
+            <elementDefinition Id="c3d895f6-407e-4078-8bb2-c13ceff43969" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="702f2524-74aa-456e-9621-cbbcc6955efd" name="AlgorithmInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="148462f8-7393-46ac-a01a-18f1619f3bea" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bf311e14-a8c1-4aef-adaf-240c5f0a614c" name="ConcretestrategyB" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="553ddc7f-03f6-47c7-b856-7b8c3d55fda9" />
+        <generalsInternal>
+          <generalization Id="895f563b-7a72-4ef8-a9df-8981b2454e6c" isSubstitutable="false">
+            <classMoniker Id="d668702c-11db-4150-ab88-0239e5e33f0d" LastKnownName="Strategy" />
+            <elementDefinition Id="14b0e913-79dd-4e8c-a6a6-e0eb0ac88e68" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="770e8f3f-d752-4fb2-9f99-8b2d5d678330" name="AlgorithmInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee5234c0-a744-4cba-a96b-0725da7a26ef" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1e1216d6-6803-4303-bdbc-9f745247776f" name="ConcretestrategyC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8478696a-02fc-46d1-8d87-3577f3b1a0c8" />
+        <generalsInternal>
+          <generalization Id="d8255bad-f6ab-423d-8585-13495e51c937" isSubstitutable="false">
+            <classMoniker Id="d668702c-11db-4150-ab88-0239e5e33f0d" LastKnownName="Strategy" />
+            <elementDefinition Id="7b860ede-abb0-484d-8200-f4c54ebdb6dc" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="69b6621a-a589-4b48-89e4-f3541cbb3ae5" name="AlgorithmInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="db898dd3-01d8-4db7-b7a1-953fe1e2b46e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d6868f9e-a296-4202-8401-aae1fc8d07dd" name="DesignPattern">
+    <elementDefinition Id="3e45850a-fdd2-4ab0-8c47-6224669680ab" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c168ab2b-ff9b-49ad-afa3-1ca81780cff0">
+        <profileInstance Id="3cda5893-eca0-4fce-98f2-66fd3a928d66" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f7d3c237-be79-432f-80c0-614fde7beb38">
+        <profileInstance Id="582dfbc4-9417-47d8-8310-425abf352a74" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

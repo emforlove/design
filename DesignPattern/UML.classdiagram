@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a2409d07-f2a2-45ae-947c-09d39851ee23" name="UML" linkedPackageId="49d5a3ca-2e82-47d6-ad5b-96875f37e973" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7be24fe3-1d36-4db1-baa3-138fa1b53d5b">
+      <elementDefinition Id="ac3597cd-aa52-40d3-8c2d-afd775f4b037" />
+      <body>关联关系</body>
+    </comment>
+    <comment Id="a9ccdf11-07b6-4d65-b1b1-6cac1153824a">
+      <elementDefinition Id="2504ec23-24a2-4844-8ebc-ec9238354376" />
+      <body>合成关系</body>
+    </comment>
+    <comment Id="f8f3d06f-12f0-4986-9e8f-7c001149b26d">
+      <elementDefinition Id="70231951-b27f-4150-bb6a-c1a247b15c7c" />
+      <body>聚合关系</body>
+    </comment>
+    <comment Id="a3046d3e-9d32-4982-b579-d2cc01258465">
+      <elementDefinition Id="527ce3d6-2cd3-4f74-b3f0-d3c1de41e2e6" />
+      <body>继承关系</body>
+    </comment>
+    <comment Id="f1407038-8a18-4877-96c8-f11062801414">
+      <elementDefinition Id="aa995d72-26e7-464e-915b-11e726d9065a" />
+      <body>依赖关系</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="b80ff292-284d-4ac6-b0f6-050e733f3dc5">
+      <profileInstance Id="7f921eba-5813-487f-ada3-f8c748ef0f5c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0b2766f8-5b5b-437b-ae41-07fedc2e8c53">
+      <profileInstance Id="1b391f22-c821-4910-87e7-cce9488026f7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="73999b1b-90b3-4600-922f-ea419ae7b8f9" name="氧气" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="90cd5351-4cbd-4298-abb1-a965a4e73672" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="24f12f0a-af5c-4c3a-b21e-0beda18dc4f0" name="水" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e6b01036-2527-4a36-a7bb-a19a0ebcd321" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7be9d1d4-f2ee-4c4f-8bc6-a79eaeeee7fe" name="动物" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6db5ad2-5c10-4396-a2eb-eebe0c54e5d9" />
+        <suppliersInternal>
+          <dependency Id="4e568203-ab52-4655-b202-64943011fedb">
+            <classMoniker Id="73999b1b-90b3-4600-922f-ea419ae7b8f9" LastKnownName="氧气" />
+            <elementDefinition Id="a408e54d-2394-4440-b1b3-7553ccaa3f6f" />
+          </dependency>
+          <dependency Id="66f86202-2b94-44dd-af1d-fbdaef3c0f23">
+            <classMoniker Id="24f12f0a-af5c-4c3a-b21e-0beda18dc4f0" LastKnownName="水" />
+            <elementDefinition Id="a6f389ec-7daf-4a07-bb35-8cbec58a7b3f" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="45887eed-92d5-430c-98fe-928de7a54b3d" name="有生命" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ddec04d-1ca7-4187-9f61-8597fdc84c9f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="a7da220e-3ae8-4e02-a141-68201d68f2b1" name="新陈代谢" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e47db947-c754-4a57-a658-c06241753800" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fbcc7183-f65c-4d6f-8d9f-c4eac027acb2" direction="In" isUnique="false">
+                  <elementDefinition Id="5bb6a199-53e5-4e91-9fd5-10f980a0160c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a950e25-300a-4a55-bb78-346942763c4c" LastKnownName="氧气" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="660adbd4-041a-4c1a-ae98-fdfbcad2c717" direction="In" isUnique="false">
+                  <elementDefinition Id="511d2c32-2f2e-4429-8535-29846f49c1db" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cf7d6182-9201-4b08-aefc-1fe242cfe71d" LastKnownName="水" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="05c96f71-2db0-492c-9334-a000ed592800" name="繁殖" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a30a8c4f-b850-4017-b89d-60cae5909763" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2a950e25-300a-4a55-bb78-346942763c4c" name="氧气" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern::氧气">
+        <elementDefinition Id="90cd5351-4cbd-4298-abb1-a965a4e73672" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cf7d6182-9201-4b08-aefc-1fe242cfe71d" name="水" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern::水">
+        <elementDefinition Id="e6b01036-2527-4a36-a7bb-a19a0ebcd321" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="227b738a-fe12-4fd8-aece-c5c65bc2accc" name="鸟" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3afbd61e-75d4-4b98-a8b5-517a52e05c8e" />
+        <generalsInternal>
+          <generalization Id="d791b6d5-5f6c-40d6-9545-444a10207699" isSubstitutable="false">
+            <classMoniker Id="7be9d1d4-f2ee-4c4f-8bc6-a79eaeeee7fe" LastKnownName="动物" />
+            <elementDefinition Id="2a3b591b-e318-4d4b-a183-f9248321c31a" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="0b6463a6-7d49-4c66-ae1e-f56c278d5524" isDerived="false" sourceEndRoleName="鸟" targetEndRoleName="翅膀" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bcc180c6-81e4-4703-8792-da8c229311a5" LastKnownName="翅膀" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d37393fe-b542-4472-a088-8dde2b12b9b6" name="鸟" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4ce91fbb-e75d-4031-8604-a68d63a770e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c168d72d-704d-4124-a9cd-9afc96e0d89e" name="翅膀" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="44ab576b-c4a5-4631-9ad9-8e190eb848ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="73fc71a8-8307-42ea-ab4b-2957e8aa87c4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="979395a2-843d-4b54-9e43-b6c51618c674" name="羽毛" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="50ba2f5e-b122-4b31-a4fd-3c202cf963b2" />
+          </property>
+          <property Id="4be6de10-2c7c-4017-98aa-c7bdda2a5d27" name="有角质喙没有牙齿" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1905b0b6-aab8-4ac2-a40c-441fd3a227ea" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e03666ef-68c2-437a-8229-f5531a3ec1e6" name="下蛋" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee23052e-c0a7-4f6b-82a2-3758acf9ba8f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bcc180c6-81e4-4703-8792-da8c229311a5" name="翅膀" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8ab45bb0-7218-41ce-8d2d-c800bb514327" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="30d7a046-ab5f-4772-aeb5-cc807bd7659b" name="大雁" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9202092-a225-4dde-b80d-60250db2be20" />
+        <suppliersInternal>
+          <interfaceRealization Id="867e15e5-2d25-4c50-b2a4-f8b06f8db14d">
+            <interfaceMoniker Id="554c9ff2-2f11-420e-896a-5d8a5a4f65ac" LastKnownName="飞翔" />
+            <elementDefinition Id="a4198499-6b03-479b-b291-ec7c126d2107" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="d8e7bac3-c0e7-4963-8e5f-03524fe96ea8" isSubstitutable="false">
+            <classMoniker Id="227b738a-fe12-4fd8-aece-c5c65bc2accc" LastKnownName="鸟" />
+            <elementDefinition Id="f26b5a25-0c78-474e-b630-1bbce29ea8f2" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="64094486-2984-4ecc-a489-d84d8bd87ece" isDerived="false" sourceEndRoleName="大雁" targetEndRoleName="雁群" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7b6a8ed4-54e7-4d9f-b7d9-719e3545e5d2" LastKnownName="雁群" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1048674-807f-4728-9215-27df434f2390" name="大雁" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0a62668a-d21c-4606-9626-53ab760d991f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e6be4ba-1e7c-466a-a11f-164352bb2ce8" name="雁群" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0e7ab7a6-a49e-4f91-84cd-ff7324a31c71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="113abd54-ed3a-4368-b6c8-4ea7596b93c3" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="656f8359-7bc4-41d6-8bb6-89b32c68cb3f" name="下蛋" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7f7b680d-a63f-4a76-8570-e8177a85a543" />
+          </operation>
+          <operation Id="3528022e-411f-4144-91b6-2d90e342ee6b" name="飞" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1e39bab3-5710-43e7-ad78-a3f4068d8727" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="715f3bcc-1aba-415e-9c4a-001d203d409e" name="鸭" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="337cc9a0-23ad-469a-b3b1-2e33101f82d1" />
+        <generalsInternal>
+          <generalization Id="88cdc42f-b7ee-4174-98ed-5b98b51c41c9" isSubstitutable="false">
+            <classMoniker Id="227b738a-fe12-4fd8-aece-c5c65bc2accc" LastKnownName="鸟" />
+            <elementDefinition Id="7788486b-6067-4d8e-b75d-0221c2334c7a" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="2a026574-2435-49a4-ae02-595a66b62a74" name="下蛋" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0638ef5d-acb0-472f-a1c8-856ece1c17e0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="91713ff9-9179-4358-bf3e-1d790854613c" name="企鹅" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7af96181-9279-48d9-942e-894f5e895801" />
+        <generalsInternal>
+          <generalization Id="7502405c-e52c-4957-8b4b-da3846641a8f" isSubstitutable="false">
+            <classMoniker Id="227b738a-fe12-4fd8-aece-c5c65bc2accc" LastKnownName="鸟" />
+            <elementDefinition Id="4ec6014a-feb4-46c4-9132-aa9e3ea93acf" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="33b7997c-f936-4ede-b9d6-1b43831798a9" isDerived="false" sourceEndRoleName="企鹅" targetEndRoleName="气候" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0937d489-8926-4a41-96a8-f50ea8b23043" LastKnownName="气候" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ad7bff3-3bde-44bb-9a4b-3708c44243d6" name="企鹅" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4b0327f9-bb28-4e5f-beb1-1ee093d6a625" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a73e5cb-946d-4157-93e0-c7a9ec2be5d1" name="气候" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a9d8e732-634a-4249-b1e2-4f31e5b40792" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd8d4479-0e00-4709-9ab2-e2df3a916d9d" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="ddaad626-103f-4030-a21f-35fda44386b6" name="下蛋" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7ef49bf-f2bf-4d84-9fcb-5701aae18db2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7b6a8ed4-54e7-4d9f-b7d9-719e3545e5d2" name="雁群" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5f74e58c-c5fc-4b08-9ff0-2bce2a5dbfbe" />
+        <ownedOperationsInternal>
+          <operation Id="3afaee85-df3b-44f9-ba8a-b4c7539e9c09" name="V飞行" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bda4ba55-3cc1-42ad-8c07-f1bbe163f99b" />
+          </operation>
+          <operation Id="21fe2e15-c3b2-4b63-8609-bb967e7b2b51" name="一飞行" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="81056a2d-3f02-4426-8263-f2305fe95357" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="554c9ff2-2f11-420e-896a-5d8a5a4f65ac" name="飞翔" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95e24f65-a0c7-4d2e-a893-4d9609029717" />
+        <ownedOperations>
+          <operation Id="c9c66b75-0ffd-4e9c-a470-c8c07ed23b76" name="飞" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ea84689f-d5e0-4be1-91ef-6c35cd91a3a9" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f50d8178-e501-46fc-b423-2e84eee643b9" name="唐老鸭" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cc006177-63b6-4e75-9428-c76f27e1acd7" />
+        <suppliersInternal>
+          <interfaceRealization Id="fc4c1902-0878-4b7f-82cc-46c039cdd29b">
+            <interfaceMoniker Id="7c974c90-998a-4688-9fa1-4e5420a3f9d4" LastKnownName="讲人话" />
+            <elementDefinition Id="90456c77-66c1-440e-bb54-453cfb6d988c" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="ac25590e-c4d0-47f3-b7f6-41256d9f0be2" isSubstitutable="false">
+            <classMoniker Id="715f3bcc-1aba-415e-9c4a-001d203d409e" LastKnownName="鸭" />
+            <elementDefinition Id="42c53dd8-377b-4f8b-821d-6c1a08e1ab24" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="bb642163-d87b-426a-b141-9083cdc9f489" name="讲话" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="288d8fbe-08b1-4897-abb3-da9a539dc7e7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0937d489-8926-4a41-96a8-f50ea8b23043" name="气候" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="052634c8-09c9-4dce-975c-8886088b74b3" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7c974c90-998a-4688-9fa1-4e5420a3f9d4" name="讲人话" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e5b0c764-a017-4410-8f47-dd2b3a4fe9ec" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="49d5a3ca-2e82-47d6-ad5b-96875f37e973" name="DesignPattern">
+    <elementDefinition Id="3e45850a-fdd2-4ab0-8c47-6224669680ab" />
+  </package>
+</logicalClassDesignerModel>

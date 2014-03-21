@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d87674ff-7a36-4822-bcb8-db2157cbbe83" name="单例模式" linkedPackageId="00a744f0-c36a-4d17-a083-c9d4e957558c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="1005f78d-e59f-43c4-98ed-8fd7c8de5c94">
+      <elementDefinition Id="1dba4569-4681-40be-a0f2-ca1e567a2bc8" />
+      <body>定义一个GetInstance操作，允许客户访问它的唯一实例，GetInstance是一个静态方法，主要负责创建自己的唯一实例。</body>
+    </comment>
+    <comment Id="9e1c2fa8-7499-4674-85a5-c0f7d90be728">
+      <elementDefinition Id="36531179-3c71-4d16-b385-b6c21b7d7874" />
+      <body>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="3bf405f1-b7c6-47f7-a3d7-556d921f0ad1">
+      <profileInstance Id="385b8274-fa60-45de-9287-effd56404d65" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a35e7c1f-9ac1-4b23-99c4-b304656e0bce">
+      <profileInstance Id="8fc9b68a-d155-42fe-9fb1-b3f812bcdeaa" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7e765346-587d-4b99-a51d-379a8100210d" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f2f1eeb-0861-4b0d-b0fe-bdc5f511c015" />
+        <ownedAttributesInternal>
+          <property Id="7f96fcba-1de8-481d-9513-35165b31c223" name="instance" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="03121dee-8110-4b20-aff1-aa03ccd610c2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2e9af31b-1ddc-4ebf-9d5c-4fde82145db8" LastKnownName="Singleton" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="0c8b1e8d-f032-4c88-a5a8-3044ac54342a" name="Singleton" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10118b21-592a-4230-8978-b0eaada2ce0e" />
+          </operation>
+          <operation Id="37d3b20c-3554-4dbc-a1d3-df927f2009f0" name="GetInstance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21a2f03b-e50d-42b1-9d24-92bf63148002" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2e9af31b-1ddc-4ebf-9d5c-4fde82145db8" name="Singleton" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern::Singleton">
+        <elementDefinition Id="1f2f1eeb-0861-4b0d-b0fe-bdc5f511c015" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="00a744f0-c36a-4d17-a083-c9d4e957558c" name="DesignPattern">
+    <elementDefinition Id="3e45850a-fdd2-4ab0-8c47-6224669680ab" />
+  </package>
+</logicalClassDesignerModel>

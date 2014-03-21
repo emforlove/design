@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="92c0d4d9-5350-476f-90e2-0c9110c6c27a" name="命令模式" linkedPackageId="6a531886-9667-41e5-b9a3-c276b5eee3c5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="370611a5-1f5d-4dba-80b3-73214c933096">
+      <elementDefinition Id="f847d055-d42d-49e4-96b6-e3a6fa9730ac" />
+      <body>用来声明执行操作的接口</body>
+    </comment>
+    <comment Id="556151dd-ab9a-4e6c-a354-b95a723fb3e5">
+      <elementDefinition Id="2f7282b4-1b5d-4316-afb1-7826418cfd24" />
+      <body>要求该命令执行这个请求</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="d16eda43-e0ee-4b56-8572-05f0bdfac4c4">
+      <profileInstance Id="f618db58-c451-401c-8568-f3f11b26a1e8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fdb8efc5-4a40-439c-a244-532be2bac3d4">
+      <profileInstance Id="f66d0e79-7eb8-41c3-8742-907092eba2ab" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="30246a91-2314-4283-9523-ed1856e25d47" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0e64e983-cf11-4962-872e-bedd9c4ae3a8" />
+        <suppliersInternal>
+          <dependency Id="f4d61a42-448f-42ea-8cfc-5a728e4c9c72">
+            <classMoniker Id="90006382-1b32-433e-8fdd-48d0255af765" LastKnownName="Invoker" />
+            <elementDefinition Id="25c37af1-ee8b-47b1-8c95-b7312788a591" />
+          </dependency>
+          <dependency Id="52312d32-4ad4-41d7-9c96-57639bb54162">
+            <classMoniker Id="608e2c6a-7d4a-4445-bd1e-c7a8529d5581" LastKnownName="Receiver" />
+            <elementDefinition Id="dde8be0b-ad90-44d1-9f52-a6aae1880274" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="90006382-1b32-433e-8fdd-48d0255af765" name="Invoker" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d40f9af5-7d5f-477c-bc04-96d4e2adb429" />
+        <targetEnds>
+          <association Id="6c3ff558-3444-4afe-b220-5b725ae5bd60" isDerived="false" sourceEndRoleName="Invoker" targetEndRoleName="Command" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4b117c4c-1738-4ed4-9da4-2331b040c9a0" LastKnownName="Command" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e20cb622-7b24-4e95-ad9e-be39a90fb15f" name="Invoker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a63f6e31-22f6-494e-8422-2177c11b10ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68e827be-49f6-4bb7-aaf7-96e24f45a6c5" name="Command" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="833084d7-e6ea-4e75-9fd7-1852c84b8ffe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf790286-98eb-4b5c-bd4e-297aa5f48bd3" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="608e2c6a-7d4a-4445-bd1e-c7a8529d5581" name="Receiver" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3093b966-e113-4057-89d3-62951d7d67be" />
+        <ownedOperationsInternal>
+          <operation Id="d8e30deb-a05a-4503-a376-2155a0af5608" name="Action" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fe21fc4-e688-4017-aea0-470baca4dc7e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2a028444-5a7b-4cdf-847f-17bf9c064f4d" name="ConcreteCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9812aca5-5dc2-479d-ab1f-f95efc1d2cfc" />
+        <suppliersInternal>
+          <interfaceRealization Id="e24e3485-a125-40a6-b606-2a5a2ecf59b8">
+            <interfaceMoniker Id="4b117c4c-1738-4ed4-9da4-2331b040c9a0" LastKnownName="Command" />
+            <elementDefinition Id="e44ff5c3-fd6d-4da1-8b4c-9facf1af2856" />
+          </interfaceRealization>
+          <dependency Id="33feaeae-78d0-4393-bf15-b5e2b5a8285d">
+            <classMoniker Id="608e2c6a-7d4a-4445-bd1e-c7a8529d5581" LastKnownName="Receiver" />
+            <elementDefinition Id="f4f86c66-a5ec-4ae2-9dac-0431291ef583" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="11894479-4479-459d-9456-b773c70f1a01" name="receiver" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ebe931c-f63f-412e-8078-28bbecb87e6c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8f4225f9-65cd-4488-91c2-61053a13ce6b" LastKnownName="Receiver" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ce218ca5-145a-4bc3-a78b-c1e0d1a2d442" name="Excute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7a9cdb37-d7a1-454d-96cf-a2360ca70202" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4b117c4c-1738-4ed4-9da4-2331b040c9a0" name="Command" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4d2744f-c526-4486-8226-52d4919ba361" />
+        <ownedOperations>
+          <operation Id="ee6c87bd-b48a-438d-a706-f02b6e83ab3f" name="Excute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cc1a3dae-dac7-4a8d-89eb-048fa74c4e12" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8f4225f9-65cd-4488-91c2-61053a13ce6b" name="Receiver" isAbstract="false" isLeaf="false" cachedFullName="DesignPattern::Receiver">
+        <elementDefinition Id="3093b966-e113-4057-89d3-62951d7d67be" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="6a531886-9667-41e5-b9a3-c276b5eee3c5" name="DesignPattern">
+    <elementDefinition Id="3e45850a-fdd2-4ab0-8c47-6224669680ab" />
+  </package>
+</logicalClassDesignerModel>
